@@ -1,8 +1,6 @@
 
 package users.model;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public abstract class User {
     private String name;
