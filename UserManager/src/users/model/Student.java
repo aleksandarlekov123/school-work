@@ -20,8 +20,8 @@ public class Student extends User {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Student [sid=").append(sid).append(", getEmail=").append(getEmail())
-				.append(", getPassword=").append(getPassword()).append(", getRole()=").append(getRole()).append("]");
+		builder.append("Student [sid=").append(sid).append(", getEmail=").append(getEmail()).append(", getPassword=")
+				.append(getPassword()).append(", getRole()=").append(getRole()).append("]");
 		return builder.toString();
 	}
 
@@ -29,9 +29,22 @@ public class Student extends User {
 		this.sid = sid;
 	}
 
-	public static void main(String[] args) {
-		Student s1 = new Student("Trayan Iliev", "trayan@abv.bg", "trayan", 15);
-		System.out.println(s1);
+	public String getWelcomeMessage() {
+		
+		return "welcome" + getName() + "(" + getEmail() + ") in role Student.";
 	}
 
+	
+
+	@Override
+	public String getetWelcomeMessage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	public static void main(String[] args) {
+		Student s1 = new Student(" Sashko", "sashko@abv.bg", "sashko", 15);
+		System.out.println(s1);
+		System.out.println(s1.getWelcomeMessage());
+		
+	}
 }

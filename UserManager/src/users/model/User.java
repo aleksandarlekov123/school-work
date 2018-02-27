@@ -4,7 +4,7 @@ package users.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class User {
+public abstract class User {
     private String name;
 	private String email;
 	private String password;
@@ -88,25 +88,27 @@ public class User {
 		return true;
 	}
 
-	public static void main(String[] args) {
-
-		User user = new User("Aleksandar","Aleksandar_Lekov@abv.bg", "lekov123", Role.ADMIN);
-
-		User user2 = new User("Georgi Georgiev "," Georgi_Georgiev@abv.bg", "asddfg123", Role.STUDENT);
-
-		User user3 = new User("Ivan Zdravkov" , "Ivan_Zdravkov@abv.bg ", " zxcvbn123", Role.INSTRUCTOR);
-
-		// System.out.println(user);
-
-		List<User> users = new ArrayList<User>();
-
-		users.add(user);
-		users.add(user2);
-		users.add(user3);
-		// System.out.println(users);
-		for (User u : users) {
-			System.out.println(u);
-		}
-	}
+	abstract public String getetWelcomeMessage();
+	
+//	public static void main(String[] args) {
+//
+//		User user = new User("Aleksandar","Aleksandar_Lekov@abv.bg", "lekov123", Role.ADMIN);
+//
+//		User user2 = new User("Georgi Georgiev "," Georgi_Georgiev@abv.bg", "asddfg123", Role.STUDENT);
+//
+//		User user3 = new User("Ivan Zdravkov" , "Ivan_Zdravkov@abv.bg ", " zxcvbn123", Role.INSTRUCTOR);
+//
+//		// System.out.println(user);
+//
+//		List<User> users = new ArrayList<User>();
+//
+//		users.add(user);
+//		users.add(user2);
+//		users.add(user3);
+//		// System.out.println(users);
+//		for (User u : users) {
+//			System.out.println(u);
+//		}
+//	}
 
 }
